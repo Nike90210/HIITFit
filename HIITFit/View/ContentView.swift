@@ -6,17 +6,15 @@
 //
 
 import SwiftUI
-
 struct ContentView: View {
+
     var body: some View {
         
-        TabView {
-
+        TabView {            
             WelcomeView()
-            ForEach( 0..<4 ) { number in
-                ExerciseView(index: number)
+            ForEach(Exercise.exercises.indices, id: \.self) { index in
+                ExerciseView(index: index)
             }
-
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
     }
