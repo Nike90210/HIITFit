@@ -13,9 +13,19 @@ struct ExerciseDay: Identifiable {
     let id = UUID()
     let date: Date
     var exercise: [String] = []
+
+
 }
 
 
 struct HistoryStore {
     var exreciseDays: [ExerciseDay] = []
+
+    init () {
+        #if DEBUG
+        createDevDeta()
+        #endif
+    }
 }
+
+

@@ -9,34 +9,39 @@ import SwiftUI
 
 struct HistoryView: View {
 
-    let today = Date()
-    let yesterday = Date().addingTimeInterval(-86400)
-
-    let exercise1 = ["Berpi", "PullUp", "PushUP", "Squat"]
-    let exercise2 = ["Berpi", "PullUp", "PushUP"]
-
-
+    let history = HistoryStore()
 
     var body: some View {
-        VStack {
-            Text("History")
-                .font(.title)
-                .padding()
-            Form {
-                Section(header:
-                            Text(today.formatted(as: .number))
-                    .font(.headline) {
-                    ForEach(exercise1, id: \.self){ exercise in
-                        Text(exercise)
-                    }
-                }
-                Section(header: Text(yesterday.formatted()).font(.headline)){
-                    ForEach(exercise2, id: \.self){ exercise in
-                        Text(exercise)
+        ZStack(alignment: .topTrailing) {
+            Button(action: {}) {
+                Image(systemName: "xmark.circle")
+            }
+            .font(.title)
+            .padding(.trailing)
+            VStack {
+                Text("History")
+                    .font(.title)
+                    .padding()
+                Form {
+                    ForEach (history.exreciseDays) { day in
+                        Section(header:
+                                    Text(dateToString(date: day.date))
+                            .font(.headline)
+                        ){
+                            ForEach(day.exercise, id: \.self){exercise in
+                                Text(exercise)
+                            }
+                        }
                     }
                 }
             }
         }
+    }
+
+    func dateToString(date: Date) -> String {
+        let dateFormatGet = DateFormatter()
+        dateFormatGet.dateFormat = "MM d"
+        return dateFormatGet.string(from: date)
     }
 }
 

@@ -21,7 +21,7 @@ struct ExerciseView: View {
 
         GeometryReader { geometry in
             VStack {
-                HeaderView(exerciseName: exercise.exerciseName)
+                HeaderView(textTitle: exercise.exerciseName)
                     .padding(.bottom)
                 VideoPlayerView(videoName: exercise.videoExercise)
                 Text(Date().addingTimeInterval(timer), style: .timer)
