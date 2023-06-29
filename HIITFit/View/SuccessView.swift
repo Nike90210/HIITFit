@@ -11,10 +11,9 @@ struct SuccessView: View {
 
     let succesMassage = """
                         Good job comletion all four exercises!
-                           Remember tomorrow's' another day!
-                             So eat well and get some rest.
+                        Remember tomorrow's' another day!
+                        So eat well and get some rest.
                         """
-
     var body: some View {
         ZStack {
             VStack(){
@@ -26,6 +25,7 @@ struct SuccessView: View {
                     .fontWeight(.bold)
                 Text(succesMassage)
                     .foregroundColor(.gray)
+                    .multilineTextAlignment(.center)
             }
             VStack{
                 Spacer()

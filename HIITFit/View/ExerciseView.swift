@@ -10,25 +10,40 @@ import AVKit
 
 struct ExerciseView: View {
 
+    var startButoon: some View {
+        Button("Start Exercise") {
+        }
+    }
+    var doneButton: some View {
+        Button("Done") {
+            selectedTab = lastExercise ? 9 : selectedTab + 1
+        }
+    }
     var exercise: Exercise {
         Exercise.exercises[index]
     }
-
+    var lastExercise: Bool {
+        index + 1 == Exercise.exercises.count
+    }
+    @Binding var selectedTab: Int
     let index: Int
     let timer: TimeInterval = 30
 
-    var body: some View {
 
+    var body: some View {
         GeometryReader { geometry in
             VStack {
-                HeaderView(textTitle: exercise.exerciseName)
+                HeaderView(selectedTab: $selectedTab, textTitle: Exercise.exercises[index].exerciseName)
                     .padding(.bottom)
                 VideoPlayerView(videoName: exercise.videoExercise)
                 Text(Date().addingTimeInterval(timer), style: .timer)
                     .font(.system(size: geometry.size.height * 0.07))
-                Button("Start/Done") {}
-                    .font(.title3)
-                    .padding()
+                HStack(spacing: 150) {
+                    startButoon
+                    doneButton
+                }
+                .font(.title3)
+                .padding()
                 RatingView()
                     .padding()
                 Spacer()
@@ -41,7 +56,7 @@ struct ExerciseView: View {
 
 struct ExerciseView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseView(index: 0)
+        ExerciseView(selectedTab: .constant(1), index: 1)
 
     }
 }

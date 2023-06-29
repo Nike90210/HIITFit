@@ -15,16 +15,17 @@
 		AA1E970A2A35AEAB000832D8 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E97092A35AEAB000832D8 /* VideoPlayerView.swift */; };
 		AA22718A2A2722F200E4AEA9 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2271892A2722F200E4AEA9 /* WelcomeView.swift */; };
 		AA22718C2A2722FE00E4AEA9 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA22718B2A2722FE00E4AEA9 /* ExerciseView.swift */; };
-		AA22719A2A27297600E4AEA9 /* PullUp.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AA2271962A27297300E4AEA9 /* PullUp.mp4 */; };
-		AA22719B2A27297600E4AEA9 /* PushUP.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AA2271972A27297300E4AEA9 /* PushUP.mp4 */; };
-		AA22719C2A27297600E4AEA9 /* Squat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AA2271982A27297500E4AEA9 /* Squat.mp4 */; };
-		AA22719D2A27297600E4AEA9 /* Berpi.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AA2271992A27297600E4AEA9 /* Berpi.mp4 */; };
 		AA523BB72A442CC000418354 /* imageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA523BB62A442CC000418354 /* imageExtension.swift */; };
 		AA61057D2A2DBC5D00377D93 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA61057C2A2DBC5D00377D93 /* HeaderView.swift */; };
 		AA61057F2A2DC0B800377D93 /* Exercise.siwft.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA61057E2A2DC0B800377D93 /* Exercise.siwft.swift */; };
 		AA6F68AE2A46D02C00551A7C /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6F68AD2A46D02C00551A7C /* SuccessView.swift */; };
 		AAC052102A3EE5C20033EBF0 /* HistoryStoreDevData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0520F2A3EE5C20033EBF0 /* HistoryStoreDevData.swift */; };
 		AAC352F92A39A17800057EAC /* HistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC352F82A39A17800057EAC /* HistoryStore.swift */; };
+		AAF28C502A4B0A96008F7DBD /* Hip-biceps.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AAF28C4B2A4B0A95008F7DBD /* Hip-biceps.mp4 */; };
+		AAF28C512A4B0A96008F7DBD /* Glute-Up.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AAF28C4C2A4B0A95008F7DBD /* Glute-Up.mp4 */; };
+		AAF28C522A4B0A96008F7DBD /* Lunge.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AAF28C4D2A4B0A96008F7DBD /* Lunge.mp4 */; };
+		AAF28C532A4B0A96008F7DBD /* Squat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AAF28C4E2A4B0A96008F7DBD /* Squat.mp4 */; };
+		AAF28C542A4B0A96008F7DBD /* Shoulders.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AAF28C4F2A4B0A96008F7DBD /* Shoulders.mp4 */; };
 		AAFEC0822A34558B0025607D /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFEC0812A34558B0025607D /* RatingView.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,16 +39,17 @@
 		AA1E97092A35AEAB000832D8 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		AA2271892A2722F200E4AEA9 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		AA22718B2A2722FE00E4AEA9 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
-		AA2271962A27297300E4AEA9 /* PullUp.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = PullUp.mp4; sourceTree = "<group>"; };
-		AA2271972A27297300E4AEA9 /* PushUP.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = PushUP.mp4; sourceTree = "<group>"; };
-		AA2271982A27297500E4AEA9 /* Squat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Squat.mp4; sourceTree = "<group>"; };
-		AA2271992A27297600E4AEA9 /* Berpi.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Berpi.mp4; sourceTree = "<group>"; };
 		AA523BB62A442CC000418354 /* imageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageExtension.swift; sourceTree = "<group>"; };
 		AA61057C2A2DBC5D00377D93 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		AA61057E2A2DC0B800377D93 /* Exercise.siwft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.siwft.swift; sourceTree = "<group>"; };
 		AA6F68AD2A46D02C00551A7C /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
 		AAC0520F2A3EE5C20033EBF0 /* HistoryStoreDevData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStoreDevData.swift; sourceTree = "<group>"; };
 		AAC352F82A39A17800057EAC /* HistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStore.swift; sourceTree = "<group>"; };
+		AAF28C4B2A4B0A95008F7DBD /* Hip-biceps.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hip-biceps.mp4"; sourceTree = "<group>"; };
+		AAF28C4C2A4B0A95008F7DBD /* Glute-Up.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glute-Up.mp4"; sourceTree = "<group>"; };
+		AAF28C4D2A4B0A96008F7DBD /* Lunge.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Lunge.mp4; sourceTree = "<group>"; };
+		AAF28C4E2A4B0A96008F7DBD /* Squat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Squat.mp4; path = ../../../../../Users/jazzband/Desktop/ViewForHIITApp/Squat.mp4; sourceTree = "<group>"; };
+		AAF28C4F2A4B0A96008F7DBD /* Shoulders.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Shoulders.mp4; sourceTree = "<group>"; };
 		AAFEC0812A34558B0025607D /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,10 +121,11 @@
 		AA22718D2A27290D00E4AEA9 /* Video */ = {
 			isa = PBXGroup;
 			children = (
-				AA2271992A27297600E4AEA9 /* Berpi.mp4 */,
-				AA2271962A27297300E4AEA9 /* PullUp.mp4 */,
-				AA2271972A27297300E4AEA9 /* PushUP.mp4 */,
-				AA2271982A27297500E4AEA9 /* Squat.mp4 */,
+				AAF28C4C2A4B0A95008F7DBD /* Glute-Up.mp4 */,
+				AAF28C4B2A4B0A95008F7DBD /* Hip-biceps.mp4 */,
+				AAF28C4D2A4B0A96008F7DBD /* Lunge.mp4 */,
+				AAF28C4F2A4B0A96008F7DBD /* Shoulders.mp4 */,
+				AAF28C4E2A4B0A96008F7DBD /* Squat.mp4 */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -210,12 +213,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAF28C502A4B0A96008F7DBD /* Hip-biceps.mp4 in Resources */,
 				AA00A5212A24D52000CFF73A /* Preview Assets.xcassets in Resources */,
-				AA22719A2A27297600E4AEA9 /* PullUp.mp4 in Resources */,
-				AA22719C2A27297600E4AEA9 /* Squat.mp4 in Resources */,
-				AA22719B2A27297600E4AEA9 /* PushUP.mp4 in Resources */,
-				AA22719D2A27297600E4AEA9 /* Berpi.mp4 in Resources */,
+				AAF28C532A4B0A96008F7DBD /* Squat.mp4 in Resources */,
+				AAF28C512A4B0A96008F7DBD /* Glute-Up.mp4 in Resources */,
 				AA00A51E2A24D52000CFF73A /* Assets.xcassets in Resources */,
+				AAF28C522A4B0A96008F7DBD /* Lunge.mp4 in Resources */,
+				AAF28C542A4B0A96008F7DBD /* Shoulders.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
