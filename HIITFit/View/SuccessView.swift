@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SuccessView: View {
 
+    @Environment(\.dismiss) var dismiss
+    @Binding var selcetedTab: Int
     let succesMassage = """
                         Good job comletion all four exercises!
                         Remember tomorrow's' another day!
@@ -26,11 +28,14 @@ struct SuccessView: View {
                 Text(succesMassage)
                     .foregroundColor(.gray)
                     .multilineTextAlignment(.center)
+                    .presentationDetents([.medium, .large])
             }
             VStack{
                 Spacer()
                 ZStack(alignment: .bottom){
                     Button("Continue") {
+                        dismiss()
+                        selcetedTab = 9
                     }
                     .padding()
                 }
@@ -40,8 +45,10 @@ struct SuccessView: View {
 }
 
 
+
 struct SuccessView_Previews: PreviewProvider {
     static var previews: some View {
-        SuccessView()
+        SuccessView(selcetedTab: .constant(3))
+
     }
 }

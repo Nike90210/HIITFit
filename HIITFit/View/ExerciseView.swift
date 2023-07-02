@@ -9,26 +9,35 @@ import SwiftUI
 import AVKit
 
 struct ExerciseView: View {
+    @State private var showSuccess = false
+    @State private var showHistory = false
+    @State private var rating = 0
+    @Binding var selectedTab: Int
+    let index: Int
+    let timer: TimeInterval = 30
 
-    var startButoon: some View {
-        Button("Start Exercise") {
-        }
-    }
-    var doneButton: some View {
-        Button("Done") {
-            selectedTab = lastExercise ? 9 : selectedTab + 1
-        }
-    }
     var exercise: Exercise {
         Exercise.exercises[index]
     }
     var lastExercise: Bool {
         index + 1 == Exercise.exercises.count
     }
-    @Binding var selectedTab: Int
-    let index: Int
-    let timer: TimeInterval = 30
-
+    var startButoon: some View {
+        Button("Start Exercise") {
+        }
+    }
+    var doneButton: some View {
+        Button("Done") {
+            if lastExercise {
+                showSuccess.toggle()
+            }else {
+                selectedTab += 1
+            }
+        }
+        .sheet(isPresented: $showSuccess) {
+            SuccessView(selcetedTab: $selectedTab)
+        }
+    }
 
     var body: some View {
         GeometryReader { geometry in
@@ -44,11 +53,17 @@ struct ExerciseView: View {
                 }
                 .font(.title3)
                 .padding()
-                RatingView()
+                RatingView(rating: $rating)
                     .padding()
                 Spacer()
-                Button("History") {}
-                    .padding(.bottom)
+                Button("History") {
+                    showHistory.toggle()
+                }
+                .sheet(isPresented: $showHistory){
+                    HistoryView(showHistory: $showHistory)
+                }
+                .font(.title)
+                .padding(.bottom)
             }
         }
     }
@@ -56,7 +71,7 @@ struct ExerciseView: View {
 
 struct ExerciseView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseView(selectedTab: .constant(1), index: 1)
+        ExerciseView(selectedTab: .constant(3), index: 3)
 
     }
 }
