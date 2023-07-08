@@ -10,11 +10,11 @@ import SwiftUI
 struct HeaderView: View {
 
     @Binding var selectedTab: Int
-    let textTitle: String
+    let titleText: String
 
     var body: some View {
         VStack {
-            Text(textTitle)
+            Text(titleText)
                 .font(.largeTitle)
             HStack {
                 ForEach(Exercise.exercises.indices, id: \.self){ index in
@@ -33,7 +33,7 @@ struct HeaderView: View {
 
 struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        HeaderView(selectedTab: .constant(0), textTitle: "Squat")
+        HeaderView(selectedTab: .constant(0), titleText: "Squat")
             .previewLayout(.sizeThatFits)
         
     }

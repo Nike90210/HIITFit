@@ -10,8 +10,8 @@ import Foundation
 
 struct Exercise {
 
+    let videoName: String
     let exerciseName: String
-    let videoExercise: String
 
 
 
@@ -28,10 +28,10 @@ struct Exercise {
 extension Exercise {
 
    static let exercises = [
-    Exercise(exerciseName: ExerciseEnum.squat.rawValue, videoExercise: "Squat"),
-    Exercise(exerciseName: ExerciseEnum.hipBiceps.rawValue, videoExercise: "Hip-biceps"),
-    Exercise(exerciseName: ExerciseEnum.lunge.rawValue, videoExercise: "Lunge"),
-    Exercise(exerciseName: ExerciseEnum.shoulders.rawValue, videoExercise: "Shoulders"),
-    Exercise(exerciseName: ExerciseEnum.gluteUp.rawValue, videoExercise: "Glute-Up")
+    Exercise(videoName: ExerciseEnum.squat.rawValue, exerciseName: "Squat"),
+    Exercise(videoName: ExerciseEnum.hipBiceps.rawValue, exerciseName: "Hip-biceps"),
+    Exercise(videoName: ExerciseEnum.lunge.rawValue, exerciseName: "Lunge"),
+    Exercise(videoName: ExerciseEnum.shoulders.rawValue, exerciseName: "Shoulders"),
+    Exercise(videoName: ExerciseEnum.gluteUp.rawValue, exerciseName: "Glute-Up")
    ]
 }

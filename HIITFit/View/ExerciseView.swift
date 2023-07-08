@@ -12,9 +12,11 @@ struct ExerciseView: View {
     @State private var showSuccess = false
     @State private var showHistory = false
     @State private var rating = 0
+    @State private var timerDone = false
+    @State private var showTimer = false
     @Binding var selectedTab: Int
+    @EnvironmentObject var history: HistoryStore
     let index: Int
-    let timer: TimeInterval = 30
 
     var exercise: Exercise {
         Exercise.exercises[index]
@@ -22,12 +24,16 @@ struct ExerciseView: View {
     var lastExercise: Bool {
         index + 1 == Exercise.exercises.count
     }
-    var startButoon: some View {
+    var startButton: some View {
         Button("Start Exercise") {
+            showTimer.toggle()
         }
     }
     var doneButton: some View {
         Button("Done") {
+            history.addDoneExercise(Exercise.exercises[index].exerciseName)
+            timerDone = false
+            showTimer.toggle()
             if lastExercise {
                 showSuccess.toggle()
             }else {
@@ -35,43 +41,60 @@ struct ExerciseView: View {
             }
         }
         .sheet(isPresented: $showSuccess) {
-            SuccessView(selcetedTab: $selectedTab)
+            SuccessView(selectedTab: $selectedTab)
         }
     }
 
     var body: some View {
         GeometryReader { geometry in
-            VStack {
-                HeaderView(selectedTab: $selectedTab, textTitle: Exercise.exercises[index].exerciseName)
-                    .padding(.bottom)
-                VideoPlayerView(videoName: exercise.videoExercise)
-                Text(Date().addingTimeInterval(timer), style: .timer)
-                    .font(.system(size: geometry.size.height * 0.07))
-                HStack(spacing: 150) {
-                    startButoon
-                    doneButton
+          VStack(spacing: 0) {
+            HeaderView(
+              selectedTab: $selectedTab,
+              titleText: Exercise.exercises[index].exerciseName)
+              .padding(.bottom)
+
+            VideoPlayerView(videoName: exercise.videoName)
+              .frame(height: geometry.size.height * 0.45)
+
+            HStack(spacing: 150) {
+              startButton
+              doneButton
+                .disabled(!timerDone)
+                .sheet(isPresented: $showSuccess) {
+                  SuccessView(selectedTab: $selectedTab)
+                    .presentationDetents([.medium, .large])
                 }
-                .font(.title3)
-                .padding()
-                RatingView(rating: $rating)
-                    .padding()
-                Spacer()
-                Button("History") {
-                    showHistory.toggle()
-                }
-                .sheet(isPresented: $showHistory){
-                    HistoryView(showHistory: $showHistory)
-                }
-                .font(.title)
-                .padding(.bottom)
             }
+            .font(.title3)
+            .padding()
+
+            if showTimer {
+              TimerView(
+                timerDone: $timerDone,
+                size: geometry.size.height * 0.07)
+            }
+
+            Spacer()
+            RatingView(rating: $rating)
+              .padding()
+
+            Button("History") {
+              showHistory.toggle()
+            }
+            .sheet(isPresented: $showHistory) {
+              HistoryView(showHistory: $showHistory)
+            }
+              .padding(.bottom)
+          }
         }
+      }
     }
-}
+
 
 struct ExerciseView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseView(selectedTab: .constant(3), index: 3)
+        ExerciseView(selectedTab: .constant(3), index: 4)
+            .environmentObject(HistoryStore())
 
     }
 }

@@ -8,47 +8,40 @@
 import SwiftUI
 
 struct SuccessView: View {
+  @Environment(\.dismiss) var dismiss
+  @Binding var selectedTab: Int
 
-    @Environment(\.dismiss) var dismiss
-    @Binding var selcetedTab: Int
-    let succesMassage = """
-                        Good job comletion all four exercises!
-                        Remember tomorrow's' another day!
-                        So eat well and get some rest.
-                        """
-    var body: some View {
-        ZStack {
-            VStack(){
-                Image(systemName: "hand.raised.fill")
-                    .resizedToFill(width: 75, height: 75)
-                    .foregroundColor(.purple)
-                Text("High Five!")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                Text(succesMassage)
-                    .foregroundColor(.gray)
-                    .multilineTextAlignment(.center)
-                    .presentationDetents([.medium, .large])
-            }
-            VStack{
-                Spacer()
-                ZStack(alignment: .bottom){
-                    Button("Continue") {
-                        dismiss()
-                        selcetedTab = 9
-                    }
-                    .padding()
-                }
-            }
+  var body: some View {
+    ZStack {
+      VStack {
+        Image(systemName: "hand.raised.fill")
+          .resizedToFill(width: 75, height: 75)
+          .foregroundColor(.purple)
+        Text("High Five!")
+          .font(.largeTitle)
+          .fontWeight(.bold)
+        Text("""
+          Good job completing all four exercises!
+          Remember tomorrow's another day.
+          So eat well and get some rest.
+          """)
+        .foregroundColor(.gray)
+          .multilineTextAlignment(.center)
+      }
+      VStack {
+        Spacer()
+        Button("Continue") {
+          selectedTab = 9
+          dismiss()
         }
+        .padding()
+      }
     }
+  }
 }
 
-
-
 struct SuccessView_Previews: PreviewProvider {
-    static var previews: some View {
-        SuccessView(selcetedTab: .constant(3))
-
-    }
+  static var previews: some View {
+    SuccessView(selectedTab: .constant(3))
+  }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 struct HistoryView: View {
 
     @Binding var showHistory: Bool
-    let history = HistoryStore()
+    @EnvironmentObject var history: HistoryStore
 
     var body: some View {
         ZStack(alignment: .topTrailing) {
@@ -24,12 +24,12 @@ struct HistoryView: View {
                     .font(.title)
                     .padding()
                 Form {
-                    ForEach (history.exreciseDays) { day in
+                    ForEach (history.exerciseDays) { day in
                         Section(header:
                                     Text(dateToString(date: day.date))
                             .font(.headline)
                         ){
-                            ForEach(day.exercise, id: \.self){exercise in
+                            ForEach(day.exercises, id: \.self){exercise in
                                 Text(exercise)
                             }
                         }
@@ -49,5 +49,6 @@ struct HistoryView: View {
 struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
         HistoryView(showHistory: .constant(true))
+            .environmentObject(HistoryStore())
     }
 }

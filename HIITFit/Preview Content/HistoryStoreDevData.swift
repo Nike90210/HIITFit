@@ -9,17 +9,17 @@ import Foundation
 
 extension HistoryStore{
 
-    mutating func createDevDeta () {
-        exreciseDays = [
+    func createDevDeta () {
+        exerciseDays = [
             ExerciseDay(date: Date().addingTimeInterval(-86400),
-                        exercise: [Exercise.exercises[0].exerciseName,
-                                   Exercise.exercises[1].exerciseName,
-                                   Exercise.exercises[2].exerciseName
-                                  ]),
+                        exercises: [Exercise.exercises[0].videoName,
+                                    Exercise.exercises[1].videoName,
+                                    Exercise.exercises[2].videoName
+                                   ]),
             ExerciseDay(date: Date().addingTimeInterval(-86400 * 2),
-                        exercise: [
-                            Exercise.exercises[0].exerciseName,
-                            Exercise.exercises[1].exerciseName
+                        exercises: [
+                            Exercise.exercises[0].videoName,
+                            Exercise.exercises[1].videoName
                         ])
         ]
     }
