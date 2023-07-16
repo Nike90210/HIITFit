@@ -10,10 +10,8 @@ import Foundation
 
 struct Exercise {
 
-    let videoName: String
     let exerciseName: String
-
-
+    let videoName: String
 
     enum ExerciseEnum: String {
         case squat = "Squat"
@@ -22,16 +20,14 @@ struct Exercise {
         case shoulders = "Shoulders"
         case gluteUp = "Glute-Up"
     }
-
 }
 
 extension Exercise {
-
    static let exercises = [
-    Exercise(videoName: ExerciseEnum.squat.rawValue, exerciseName: "Squat"),
-    Exercise(videoName: ExerciseEnum.hipBiceps.rawValue, exerciseName: "Hip-biceps"),
-    Exercise(videoName: ExerciseEnum.lunge.rawValue, exerciseName: "Lunge"),
-    Exercise(videoName: ExerciseEnum.shoulders.rawValue, exerciseName: "Shoulders"),
-    Exercise(videoName: ExerciseEnum.gluteUp.rawValue, exerciseName: "Glute-Up")
+    Exercise(exerciseName: ExerciseEnum.squat.rawValue, videoName: "Squat"),
+    Exercise(exerciseName: ExerciseEnum.hipBiceps.rawValue, videoName: "Hip-biceps"),
+    Exercise(exerciseName: ExerciseEnum.lunge.rawValue, videoName: "Lunge"),
+    Exercise(exerciseName: ExerciseEnum.shoulders.rawValue, videoName: "Shoulders"),
+    Exercise(exerciseName: ExerciseEnum.gluteUp.rawValue, videoName: "Glute-Up")
    ]
 }

@@ -25,7 +25,7 @@ struct SuccessView: View {
           Remember tomorrow's another day.
           So eat well and get some rest.
           """)
-        .foregroundColor(.gray)
+          .foregroundColor(.gray)
           .multilineTextAlignment(.center)
       }
       VStack {
