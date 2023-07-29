@@ -10,7 +10,6 @@ import AVKit
 
 struct ExerciseView: View {
     @EnvironmentObject var history: HistoryStore
-
     @State private var showHistory = false
     @State private var showSuccess = false
     @State private var timerDone = false
@@ -27,7 +26,7 @@ struct ExerciseView: View {
     }
 
     var startButton: some View {
-        Button("Start Exercise") {
+        RaisedButton(buttonText: "Start exercise") {
             showTimer.toggle()
         }
     }
@@ -45,6 +44,19 @@ struct ExerciseView: View {
         }
     }
 
+    var historyButton: some View {
+        Button (
+            action: {
+                showHistory = true
+            }, label: {
+                Text("History")
+                    .fontWeight(.bold)
+                    .padding([.leading, .trailing], 5)
+            })
+        .padding(.bottom, 10)
+        .buttonStyle(EmbossedButtonStyle())
+    }
+
     var body: some View {
         GeometryReader { geometry in
             VStack(spacing: 0) {
@@ -52,39 +64,39 @@ struct ExerciseView: View {
                     selectedTab: $selectedTab,
                     titleText: Exercise.exercises[index].exerciseName)
                 .padding(.bottom)
-
-                VideoPlayerView(videoName: exercise.videoName)
-                    .frame(height: geometry.size.height * 0.45)
-
-                HStack(spacing: 150) {
-                    startButton
-                    doneButton
-                        .disabled(!timerDone)
-                        .sheet(isPresented: $showSuccess) {
-                            SuccessView(selectedTab: $selectedTab)
-                                .presentationDetents([.medium, .large])
-                        }
-                }
-                .font(.title3)
-                .padding()
-
-                if showTimer {
-                    TimerView(
-                        timerDone: $timerDone,
-                        size: geometry.size.height * 0.07)
-                }
-
                 Spacer()
-                RatingView(exerciseIndex: index)
-                    .padding()
+                ContainerView{
+                    VStack(){
+                        VideoPlayerView(videoName: exercise.videoName)
+                            .frame(height: geometry.size.height * 0.45)
 
-                Button("History") {
-                    showHistory.toggle()
+                        HStack(spacing: 150) {
+                            startButton
+                            doneButton
+                                .disabled(!timerDone)
+                                .sheet(isPresented: $showSuccess) {
+                                    SuccessView(selectedTab: $selectedTab)
+                                        .presentationDetents([.medium, .large])
+                                }
+                        }
+                        .font(.title3)
+                        .padding()
+                        if showTimer {
+                            TimerView(
+                                timerDone: $timerDone,
+                                size: geometry.size.height * 0.07)
+                        }
+                        Spacer()
+                        RatingView(exerciseIndex: index)
+                            .padding()
+                        historyButton
+                            .sheet(isPresented: $showHistory) {
+                                HistoryView(showHistory: $showHistory)
+                            }
+                            .padding(.bottom)
+                    }
                 }
-                .sheet(isPresented: $showHistory) {
-                    HistoryView(showHistory: $showHistory)
-                }
-                .padding(.bottom)
+                .frame(height: geometry.size.height * 0.8)
             }
         }
     }
@@ -96,4 +108,3 @@ struct ExerciseView_Previews: PreviewProvider {
             .environmentObject(HistoryStore())
     }
 }
-

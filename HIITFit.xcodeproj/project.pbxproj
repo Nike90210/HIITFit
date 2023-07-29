@@ -12,17 +12,22 @@
 		AA00A51E2A24D52000CFF73A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA00A51D2A24D52000CFF73A /* Assets.xcassets */; };
 		AA00A5212A24D52000CFF73A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA00A5202A24D52000CFF73A /* Preview Assets.xcassets */; };
 		AA0A4F7D2A384367006A6154 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0A4F7C2A384367006A6154 /* HistoryView.swift */; };
+		AA12F7F92A6D060800852019 /* WelcomeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA12F7F82A6D060800852019 /* WelcomeImage.swift */; };
 		AA1E970A2A35AEAB000832D8 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E97092A35AEAB000832D8 /* VideoPlayerView.swift */; };
 		AA22718A2A2722F200E4AEA9 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2271892A2722F200E4AEA9 /* WelcomeView.swift */; };
 		AA22718C2A2722FE00E4AEA9 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA22718B2A2722FE00E4AEA9 /* ExerciseView.swift */; };
+		AA33375D2A6FA9EE00F05ECC /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA33375C2A6FA9EE00F05ECC /* ContainerView.swift */; };
 		AA3DDBDB2A58325A0068DDBD /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3DDBDA2A58325A0068DDBD /* DateExtension.swift */; };
 		AA523BB72A442CC000418354 /* imageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA523BB62A442CC000418354 /* imageExtension.swift */; };
 		AA5A58742A55531C0062DBB9 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5A58732A55531C0062DBB9 /* TimerView.swift */; };
 		AA61057D2A2DBC5D00377D93 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA61057C2A2DBC5D00377D93 /* HeaderView.swift */; };
 		AA61057F2A2DC0B800377D93 /* Exercise.siwft.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA61057E2A2DC0B800377D93 /* Exercise.siwft.swift */; };
 		AA6F68AE2A46D02C00551A7C /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6F68AD2A46D02C00551A7C /* SuccessView.swift */; };
+		AA7FD2C62A6BB84900BD6F96 /* RaisedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7FD2C52A6BB84900BD6F96 /* RaisedButton.swift */; };
+		AAAF1ABC2A6E581400880490 /* EmbossedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAF1ABB2A6E581400880490 /* EmbossedButton.swift */; };
 		AAC052102A3EE5C20033EBF0 /* HistoryStoreDevData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0520F2A3EE5C20033EBF0 /* HistoryStoreDevData.swift */; };
 		AAC352F92A39A17800057EAC /* HistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC352F82A39A17800057EAC /* HistoryStore.swift */; };
+		AADE15D62A7249F3005F0DE8 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE15D52A7249F3005F0DE8 /* GradientBackground.swift */; };
 		AAF28C502A4B0A96008F7DBD /* Hip-biceps.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AAF28C4B2A4B0A95008F7DBD /* Hip-biceps.mp4 */; };
 		AAF28C512A4B0A96008F7DBD /* Glute-Up.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AAF28C4C2A4B0A95008F7DBD /* Glute-Up.mp4 */; };
 		AAF28C522A4B0A96008F7DBD /* Lunge.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AAF28C4D2A4B0A96008F7DBD /* Lunge.mp4 */; };
@@ -38,17 +43,22 @@
 		AA00A51D2A24D52000CFF73A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA00A5202A24D52000CFF73A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AA0A4F7C2A384367006A6154 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		AA12F7F82A6D060800852019 /* WelcomeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeImage.swift; sourceTree = "<group>"; };
 		AA1E97092A35AEAB000832D8 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		AA2271892A2722F200E4AEA9 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		AA22718B2A2722FE00E4AEA9 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
+		AA33375C2A6FA9EE00F05ECC /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		AA3DDBDA2A58325A0068DDBD /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		AA523BB62A442CC000418354 /* imageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageExtension.swift; sourceTree = "<group>"; };
 		AA5A58732A55531C0062DBB9 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		AA61057C2A2DBC5D00377D93 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		AA61057E2A2DC0B800377D93 /* Exercise.siwft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.siwft.swift; sourceTree = "<group>"; };
 		AA6F68AD2A46D02C00551A7C /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
+		AA7FD2C52A6BB84900BD6F96 /* RaisedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaisedButton.swift; sourceTree = "<group>"; };
+		AAAF1ABB2A6E581400880490 /* EmbossedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbossedButton.swift; sourceTree = "<group>"; };
 		AAC0520F2A3EE5C20033EBF0 /* HistoryStoreDevData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStoreDevData.swift; sourceTree = "<group>"; };
 		AAC352F82A39A17800057EAC /* HistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStore.swift; sourceTree = "<group>"; };
+		AADE15D52A7249F3005F0DE8 /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
 		AAF28C4B2A4B0A95008F7DBD /* Hip-biceps.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hip-biceps.mp4"; sourceTree = "<group>"; };
 		AAF28C4C2A4B0A95008F7DBD /* Glute-Up.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glute-Up.mp4"; sourceTree = "<group>"; };
 		AAF28C4D2A4B0A96008F7DBD /* Lunge.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Lunge.mp4; sourceTree = "<group>"; };
@@ -119,6 +129,11 @@
 				AA5A58732A55531C0062DBB9 /* TimerView.swift */,
 				AA1E97092A35AEAB000832D8 /* VideoPlayerView.swift */,
 				AA2271892A2722F200E4AEA9 /* WelcomeView.swift */,
+				AA12F7F82A6D060800852019 /* WelcomeImage.swift */,
+				AA7FD2C52A6BB84900BD6F96 /* RaisedButton.swift */,
+				AAAF1ABB2A6E581400880490 /* EmbossedButton.swift */,
+				AA33375C2A6FA9EE00F05ECC /* ContainerView.swift */,
+				AADE15D52A7249F3005F0DE8 /* GradientBackground.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -236,9 +251,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA12F7F92A6D060800852019 /* WelcomeImage.swift in Sources */,
 				AA5A58742A55531C0062DBB9 /* TimerView.swift in Sources */,
+				AA7FD2C62A6BB84900BD6F96 /* RaisedButton.swift in Sources */,
 				AA3DDBDB2A58325A0068DDBD /* DateExtension.swift in Sources */,
 				AAC052102A3EE5C20033EBF0 /* HistoryStoreDevData.swift in Sources */,
+				AADE15D62A7249F3005F0DE8 /* GradientBackground.swift in Sources */,
 				AA61057D2A2DBC5D00377D93 /* HeaderView.swift in Sources */,
 				AA22718C2A2722FE00E4AEA9 /* ExerciseView.swift in Sources */,
 				AA523BB72A442CC000418354 /* imageExtension.swift in Sources */,
@@ -247,10 +265,12 @@
 				AA00A51C2A24D51E00CFF73A /* ContentView.swift in Sources */,
 				AA22718A2A2722F200E4AEA9 /* WelcomeView.swift in Sources */,
 				AA61057F2A2DC0B800377D93 /* Exercise.siwft.swift in Sources */,
+				AA33375D2A6FA9EE00F05ECC /* ContainerView.swift in Sources */,
 				AA00A51A2A24D51E00CFF73A /* HIITFitApp.swift in Sources */,
 				AAFEC0822A34558B0025607D /* RatingView.swift in Sources */,
 				AA0A4F7D2A384367006A6154 /* HistoryView.swift in Sources */,
 				AA1E970A2A35AEAB000832D8 /* VideoPlayerView.swift in Sources */,
+				AAAF1ABC2A6E581400880490 /* EmbossedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,51 +8,67 @@
 import SwiftUI
 
 struct WelcomeView: View {
-  @State private var showHistory = false
-  @Binding var selectedTab: Int
+    @State private var showHistory = false
 
-  var body: some View {
-    ZStack {
-      VStack {
-        HeaderView(selectedTab: $selectedTab, titleText: "Welcome")
-        Spacer()
-        Button("History") {
-          showHistory.toggle()
-        }
-        .sheet(isPresented: $showHistory) {
-          HistoryView(showHistory: $showHistory)
-        }
-        .padding(.bottom)
-      }
+    @Binding var selectedTab: Int
 
-      VStack {
-        HStack(alignment: .bottom) {
-          VStack(alignment: .leading) {
-            Text("Get fit")
-              .font(.largeTitle)
-            Text("with high intensity interval training")
-              .font(.headline)
-          }
-          Image("step-up")
-            .resizedToFill(width: 240, height: 240)
-            .clipShape(Circle())
+    var getStartedButton: some View {
+        RaisedButton(buttonText: "Get started") {
+            selectedTab = 0
         }
-        Button(action: { selectedTab = 0 }) {
-          Text("Get Started")
-          Image(systemName: "arrow.right.circle")
-        }
-        .font(.title2)
         .padding()
-        .background(
-          RoundedRectangle(cornerRadius: 20)
-          .stroke(Color.gray, lineWidth: 2))
-      }
     }
-  }
+
+    var historyButton: some View {
+        Button (
+            action: {
+                showHistory = true
+            }, label: {
+                Text("History")
+                    .fontWeight(.semibold)
+                    .padding([.bottom, .trailing], 5)
+            })
+        .padding(.bottom, 10)
+        .buttonStyle(EmbossedButtonStyle())
+    }
+
+    var body: some View {
+        GeometryReader { geometry in
+            VStack {
+                HeaderView(selectedTab: $selectedTab,
+                           titleText: "Welcome")
+                Spacer()
+                ContainerView {
+                    ViewThatFits {
+                        VStack{
+                            WelcomeView.images
+                            WelcomeView.welcomeText
+                            getStartedButton
+                            Spacer()
+                            historyButton
+                        }
+                        // Альтернативный запуск текста без изображения при случае, когда экран устройства маленький и картинки не влезает коректн
+                        VStack {
+                            WelcomeView.welcomeText
+                            getStartedButton
+                            Spacer()
+                            historyButton
+                        }
+                    }
+                }
+                .frame(height: geometry.size.height * 0.8)
+            }
+            .sheet(isPresented: $showHistory){
+                HistoryView(showHistory: $showHistory)
+            }
+        }
+
+
+    }
 }
 
 struct WelcomeView_Previews: PreviewProvider {
-  static var previews: some View {
-    WelcomeView(selectedTab: .constant(9))
-  }
+    static var previews: some View {
+        WelcomeView(selectedTab: .constant(9))
+    }
 }

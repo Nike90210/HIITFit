@@ -13,7 +13,7 @@ struct HistoryView: View {
 
   var body: some View {
     ZStack(alignment: .topTrailing) {
-        
+  
       Button(action: { showHistory.toggle() }) {
         Image(systemName: "xmark.circle")
       }
